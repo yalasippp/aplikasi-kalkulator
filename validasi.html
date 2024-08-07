@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Validasi </title>
+</head>
+
+<style>
+    form{
+        border: solid 1px #ccc;
+        padding: 20px;
+        width: 300px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    div{
+        margin-bottom: 10px;
+    }
+
+    input{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button{
+        width: 100%;
+    }
+
+    .utama{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+</style>
+
+<body>
+    <div class="utama">
+        <form action="#">
+            <div>
+                <label for="username"> Username : </label>
+                <input type="text" name="username" id="username">
+            </div>
+
+            <div>
+                <label for="password"> Password : </label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div>
+                <button onclick="checkForm()"> Login </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkForm(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username == ""  ||  password == ""){
+                alert("Form tidak boleh kosong")
+            }
+
+            else {
+                alert("Berhasil login")
+            }
+        }
+    </script>
+</body>
+</html>
